@@ -1,0 +1,20 @@
+{
+  "Anonymous": {
+    "id": "-1",
+    "representativeSeller": {},
+    "user": {
+      "mobile": "",
+      "extraProperties": [],
+      "userName": "",
+      "firstName": "Anonymous",
+      "rolesIds": [],
+      "password": "",
+      "id": "-1",
+      "LastName": "User",
+      "email": "",
+      "rolesTitles": [
+        "Anonymous"
+      ]
+    }
+  }
+}

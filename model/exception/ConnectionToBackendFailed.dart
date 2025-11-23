@@ -1,0 +1,6 @@
+
+
+class ConnectionToBackendFailed implements Exception
+{
+
+}

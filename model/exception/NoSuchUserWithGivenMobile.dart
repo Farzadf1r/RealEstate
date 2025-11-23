@@ -1,0 +1,6 @@
+
+
+class NoSuchUserWithGivenMobile implements Exception
+{
+
+}

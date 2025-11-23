@@ -1,0 +1,19 @@
+{
+  "Seller": {
+    "user": {
+      "userName": null,
+      "firstName": "first_name",
+      "email": "mbehdadm@gmail.com",
+      "rolesTitles": [
+        "Agent"
+      ],
+      "extraProperties": {},
+      "id": "6290ead5f34fe0241e513d29",
+      "LastName": "last_name"
+    },
+    "invitationsCount": 0,
+    "representingCustomersCount": 0
+  },
+  "Customer": null,
+  "Admin": null
+}

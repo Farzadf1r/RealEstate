@@ -1,0 +1,71 @@
+name: realestate_app
+description: A new Flutter application.
+
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  image_picker: ^0.8.5+2
+  google_maps_flutter: ^2.0.5
+  mutex: ^3.0.0
+  autocomplete_textfield: ^2.0.1
+  pull_to_refresh: 2.0.0
+  flutter_svg: ^1.0.3
+  rxdart: ^0.27.0
+  shimmer: ^2.0.0
+  meta: ^1.3.0
+  http: ^0.13.3
+  url_launcher: ^6.0.4
+  shared_preferences: ^2.0.5
+  path_provider: ^2.0.10
+  cupertino_icons: ^1.0.2
+  google_maps_cluster_manager: 3.0.0+1
+#  geolocator: 9.0.1
+  #  fluster: 1.2.0
+#  flutter_cache_manager: 3.3.0
+  #flutter_general:
+ #   path: ../FlutterGeneralLibrary
+
+  flutter:
+    sdk: flutter
+
+
+#dev_dependencies:
+
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - images/
+    - assets/sample.json
+
+
+  fonts:
+    - family: PTSansCaption
+      fonts:
+        - asset: assets/fonts/PTSansCaption-Regular.ttf
+          weight : 400
+        - asset: assets/fonts/PTSansCaption-Bold.ttf
+          weight : 700
+    - family: Halvetica
+      fonts:
+        - asset : assets/fonts/helvetica_light.ttf
+          weight : 100
+        - asset : assets/fonts/Helvetica.ttf
+          weight : 400
+        - asset : assets/fonts/Helvetica-Bold.ttf
+          weight : 700
+    - family: HalveticaNeue
+      fonts:
+        - asset : assets/fonts/HelveticaNeue.ttf
+          weight : 400
+
+#dependency_overrides:
+  # fix `packageRoot`compile error for iOS, because `path_provider` is using an old version of `platform`
+ # platform: ^3.1.0 # overrides `path_provider`

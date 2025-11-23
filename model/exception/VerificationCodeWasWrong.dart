@@ -1,0 +1,6 @@
+
+
+class VerificationCodeWasWrong implements Exception
+{
+
+}

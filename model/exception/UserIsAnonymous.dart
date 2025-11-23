@@ -1,0 +1,6 @@
+
+
+class UserIsAnonymous implements Exception
+{
+
+}
