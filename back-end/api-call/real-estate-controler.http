@@ -1,0 +1,7 @@
+####### get all ads
+GET http://192.251.198.200:8081/ads/
+
+
+####### request tocken for user
+POST https://192.251.198.200:8081/otp/
+recipient: mbm.449@gmail.com

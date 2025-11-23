@@ -1,0 +1,7 @@
+####### delet all relations
+DELETE http://192.251.198.200:8081/relations/
+
+
+
+###### get all relations
+GET http://192.251.198.200:8081/relations/

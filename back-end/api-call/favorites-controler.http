@@ -1,0 +1,8 @@
+####### delete all favorites
+DELETE http://192.251.198.200:8081/favorites/
+
+
+
+
+####### get all favorites
+GET http://192.251.198.200:8081/favorites/

@@ -1,0 +1,10 @@
+####### delete all photos
+DELETE http://192.251.198.200:8081/photos/
+
+
+####### get all photos
+GET https://192.251.198.200:8081/photos/
+
+
+####### get user photo
+GET https://192.251.198.200:8081/photos/mbm.449@gmail.com

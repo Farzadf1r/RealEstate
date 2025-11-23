@@ -1,0 +1,35 @@
+####### delete all users
+DELETE http://192.251.198.200:8081/users
+
+####### delete user by email
+DELETE http://192.251.198.200:8081/users/mbedadm@gmail.com
+
+####### get all users
+GET https://192.251.198.200:8081/users
+
+####### create agent user
+POST https://192.251.198.200:8081/users/agent/Johnder@remaxhallmark.com
+# ffarzad45@gmail.com
+
+
+####### create client user
+POST http://192.251.198.200:8081/users/client/mbm.449@gmail.com
+
+
+########
+PUT http://192.251.198.200:8081/users
+Accept: application/json
+Content-Type: application/json;charset=UTF-8
+user-token: 12312313
+
+{
+"id": "6277027e9c44fa4196c176ba",
+"firstName": "Behdad",
+"lastName": "Moudi",
+"email": "mbehddm@gmail.com",
+"roles": "Agent"
+}
+
+###############
+GET https://104.45.129.178/listings?pageNum=1&resultsPerPage=10&type=sale&sortBy=updatedOnDesc
+REPLIERS-API-KEY: WFNUnFKbh3SVkXrXUbx65WwWH47X2S

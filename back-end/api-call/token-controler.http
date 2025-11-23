@@ -1,0 +1,7 @@
+####### delete all token
+DELETE http://192.251.198.200:8081/tokens
+
+
+
+####### get all token
+GET http://192.251.198.200:8081/tokens

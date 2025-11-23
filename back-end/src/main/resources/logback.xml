@@ -1,0 +1,64 @@
+<configuration  scan="true" scanPeriod="30 seconds">
+
+    <property name="LOG_PATH" value="./logs-spring"/>
+    <property name="LOG_DATE" value="%d{yyyy-MM-dd}"/>
+
+    <property name="PATTERN" value="%d [%t] %-5level %logger{36} - %msg%n %ex{full}"/>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>${PATTERN}</Pattern>
+        </layout>
+    </appender>
+    <appender name="FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/real-estate.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/archive/%d{yyyy-MM-dd}/real-estate.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <!-- each archived file, size max 10MB -->
+            <maxFileSize>50MB</maxFileSize>
+            <!-- total size of all archive files, if total size > 20GB, it will delete old archived file -->
+            <totalSizeCap>1GB</totalSizeCap>
+            <!-- 60 days to keep -->
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <Pattern>${PATTERN}</Pattern>
+        </encoder>
+    </appender>
+
+   <!-- <appender name="json" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">
+            <jsonFormatter
+                    class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+                <prettyPrint>true</prettyPrint>
+            </jsonFormatter>
+            <timestampFormat>yyyy-MM-dd' 'HH:mm:ss.SSS</timestampFormat>
+        </layout>
+    </appender>-->
+
+    <logger name="com.houselogiq" level="DEBUG" additivity="true">
+        <appender-ref ref="FILE-ROLLING"/>
+    </logger>
+    <logger name="org.springframework.web.filter.CommonsRequestLoggingFilter">
+        <level value="OFF" />
+    </logger>
+    <logger name="org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor">
+        <level value="OFF" />
+    </logger>
+    <logger name="org.mongodb.driver.cluster">
+        <level value="OFF" />
+    </logger>
+    <logger name="org.mongodb.driver.protocol.command">
+        <level value="OFF" />
+    </logger>
+
+
+
+
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE-ROLLING"/>
+    </root>
+
+</configuration>
